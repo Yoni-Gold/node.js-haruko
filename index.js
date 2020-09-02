@@ -18,7 +18,7 @@ const unknownEndpoint = (request, response) => {
 
 ////// mongoDB ////////
 
-const url = `mongodb+srv://yoni:${process.env.PASSWORD}@firsttestcluster.uv5un.mongodb.net/${process.env.DATABASE}?retryWrites=true&w=majority`;
+const url = `mongodb+srv://yoni:${process.env.PASSWORD || "data206786568"}@firsttestcluster.uv5un.mongodb.net/${process.env.DATABASE || "phone-book"}?retryWrites=true&w=majority`;
 
 const noteSchema = new mongoose.Schema({
   name: String,
@@ -151,7 +151,7 @@ app.post('/api/persons', async (req, res) => {
 
 app.use(unknownEndpoint);
 
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3004;
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 })
