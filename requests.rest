@@ -1,0 +1,23 @@
+GET http://localhost:3004/api/persons
+
+###
+
+GET http://localhost:3004/info
+
+###
+
+GET http://localhost:3004/api/persons/yakov
+
+###
+
+POST http://localhost:3004/api/persons
+Content-Type: application/json
+
+{
+   "name": "yoav",
+   "number": "052-3088802"
+}
+
+###
+
+DELETE http://localhost:3004/api/persons/yakov
